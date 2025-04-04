@@ -1,0 +1,155 @@
+.chat-container {
+  // height: calc(100vh - 65px);
+
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  overflow: hidden;
+  padding: 32px 8px 48px 8px;
+  justify-content: space-between;
+  gap: 16px;
+
+  .chat-window {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    .message {
+      color: #4b5963;
+      padding: 12px;
+      line-height: 20px;
+      font-size: 14px;
+      white-space: pre-wrap; // allow multiline
+
+      &.user-bubble {
+        border: 1px solid #c7ced3;
+        border-radius: 8px;
+        background: var(--Grayscale-Colors-white, #ffffff);
+        align-self: flex-end;
+      }
+
+      &.server-bubble {
+        color: #38424b;
+        // background-color: #f0f0f0;
+      }
+
+      .hidden-bubble {
+        color: #546470;
+      }
+
+      p {
+        margin: 0;
+        display: inline;
+      }
+
+      pre {
+        overflow: auto;
+      }
+    }
+  }
+
+  .input-container {
+    display: flex;
+
+    border: 1px solid #e3e6e9;
+    box-shadow: 0px 2px 8px 0px #2f373e33;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    align-items: center;
+
+    .textarea {
+      flex-grow: 1;
+      resize: none;
+      font-size: 14px;
+      padding: 8px;
+      outline: none;
+      border: none;
+      line-height: 20px;
+      overflow-y: auto;
+    }
+
+    .button {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background-color: transparent;
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.expand-button {
+  cursor: pointer;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #546470;
+  margin: 8px 0;
+  padding: 0;
+
+  img {
+    width: 16px;
+    height: 16px;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dot-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.dot-loader span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #667988;
+  opacity: 0.3;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.dot-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--Grayscale-Colors-background-2-A200, #e3e6e9);
+  height: 64;
+  justify-content: center;
+  padding: 16px 24px;
+}

@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  background-color: #f6f8fb;
+
+  color: #38424b;
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-template-rows: 65px 1fr;
+  grid-template-columns: 1fr;
+}
+
+.flex {
+  display: flex;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  vertical-align: middle;
+}
