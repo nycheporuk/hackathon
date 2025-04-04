@@ -1,5 +1,5 @@
 import { useState, type KeyboardEvent } from 'react';
-import sendIcon from '~/assets/svg/send.svg';
+import sendIcon from '~/assets/svg/Send.svg';
 import TextareaAutosize from 'react-textarea-autosize';
 
 interface InputProps {
